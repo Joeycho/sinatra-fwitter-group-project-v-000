@@ -34,12 +34,14 @@ class ApplicationController < Sinatra::Base
   end
   
   get '/tweets' do
-    
     erb :"/tweets/index"
   end
   
   get '/lonin' do
     erb :"/login"
   end
+  
+  post '/login' do
+    
 
 end
