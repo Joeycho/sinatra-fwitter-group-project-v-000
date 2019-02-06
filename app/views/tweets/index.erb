@@ -1,5 +1,4 @@
 <p>Welcome, <%=User.find(session[:user_id]).username%></p
-<%binding.pry%>
 <%User.find(session[:user_id]).tweets.each do |tweet|%>
 <li>Your tweet: <%=tweet.content%></li>
 <%end%>
