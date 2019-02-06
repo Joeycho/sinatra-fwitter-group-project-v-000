@@ -34,7 +34,11 @@ class ApplicationController < Sinatra::Base
   end
   
   get '/tweets' do
+    if session[:user_id]==nil
+    erb :"/login"
+    else
     erb :"/tweets/index"
+    end
   end
   
   get '/login' do
