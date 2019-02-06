@@ -38,5 +38,7 @@ class ApplicationController < Sinatra::Base
     erb :"/tweets/index"
   end
   
+  get 'longin'
+  
 
 end
