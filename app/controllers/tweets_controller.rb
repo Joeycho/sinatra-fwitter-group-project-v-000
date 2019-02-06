@@ -16,5 +16,14 @@ get '/tweets/new' do
     end
 end
 
+post '/tweets' do
+      if params[:content]!=""
+      Twitter.create(content: => params[:content], user_id: => session[:user_id])
+        redirect "/tweets"
+      else
+        redirect "/tweets/new"
+      end
+  end
+
 
 end
