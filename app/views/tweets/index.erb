@@ -1,5 +1,5 @@
 <p>Welcome, <%=User.find(session[:user_id]).username%></p
-<%User.find(session[:user_id]).tweets.each do |tweet|%>
-<li>Your tweet: <%=tweet.content%></li>
+<%Tweet.all.each do |tweet|%>
+<li>The tweet: <%=tweet.content%> from <%=User.find(tweet.user_id).username%></li>
 <%end%>
 <p><a href="/logout">Log Out</a></p>
