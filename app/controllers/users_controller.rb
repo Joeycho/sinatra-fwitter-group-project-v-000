@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
 
-  get "/users/#{user.slug}" do
+  get "/users/:slug" do
+    @user = User.find_by_slug
     erb "users/index"
   end
 
