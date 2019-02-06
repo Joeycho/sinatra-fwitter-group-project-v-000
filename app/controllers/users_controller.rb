@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 
   get "/users/#{user.slug}" do
-    erb :show
+    erb "users/index"
   end
 
 end
